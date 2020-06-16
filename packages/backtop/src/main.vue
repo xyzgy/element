@@ -78,7 +78,7 @@ export default {
       }
     },
     onScroll() {
-      const scrollTop = this.el.scrollTop;
+      const scrollTop = this.el.scrollTop || document.body.scrollTop;
       this.visible = scrollTop >= this.visibilityHeight;
     },
     handleClick(e) {
